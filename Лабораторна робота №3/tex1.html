@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<title>LatexText</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" async
+		  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+		</script>
+</head>
+
+<body>
+<h1 align="center" style=" color: blueviolet">Вища математика</h1>
+<blockquote>
+<h2  style=" color: darkmagenta">Приклад 1.</h2>
+ Знайти границю функції ${y=\frac{{x}^{2}+3x-4}{x+4},}$ коли ${x\to{2}}$. Розглянемо: ${f(x)={x}^{2}+3x-4}$ i ${g(x)=x+4}$, тому ${y=\frac{f(x)}{g(x)}.}$
+ <br> Застосовуючи теореми 1 і 2, матимемо: $${\lim_{x\to2}f(x)=\lim_{x\to2}({x}^{2}-3x-4)=2+4=6};$$ $${\lim_{x\to2}\varphi(x)=\lim_{x\to2}(x+4)=2+4=6}.$$ І, отже, за теоремою дістанемо: $${\lim_{x\to2}y=\lim_{x\to2}\frac{f(x)}{g(x)}=\frac{6}{6}=1.}$$
+ 
+ <h2  style=" color: darkmagenta">Приклад 2.</h2>
+ ${\int\frac{sinx}{sinx+cosx}dx}.$ В даному випадку ${R(u,v)=\frac{u}{u+v}}.$ Оскільки ${R(-sinx,-cosx)=\frac{-sinx}{-sinx-cosx}=\frac{sinx}{sinx+cosx}=R(sinx,cosx),}$ то застосовуємо підстановку ${t=tgx.}$ Тоді ${dt=\frac{dx}{{cos}^{2}x}}.$ 
+ $${dx={cos}^{2}xdt=\frac{dt}{1+{tg}^{2}}},$$ $${\frac{sinx}{sinx+cosx}=\frac{\frac{sinx}{cosx}}{\frac{sinx}{cosx}+\frac{cosx}{cosx}}=\frac{tgx}{tgx+1}=\frac{t}{t+1}.}$$ Отже, дістаємо: ${\int\frac{sinx}{sinx+cosx}dx=\int\frac{t}{(1+t)(1+{t}^{2})}dt.}$
+ 
+<h2  style=" color: darkmagenta">Приклад 3.</h2>
+Розв’яжемо рівняння ${y'-\frac{2x}{1+{x}^{2}}y=x\sqrt{{x}^{2}+1}.}$ Нехай ${y=uv.}$ Тоді: $${u'v+uv'-\frac{2x}{1+{x}^{2}}uv=x\sqrt{{x}^{2}+1},}$$ 
+$${u'-\frac{2x}{1+{x}^{2}}u=0,}$$ 
+$${\frac{du}{u}=\frac{2xdx}{1+{x}^{2}},}$$
+$${ln|u|=ln(1+{x}^{2}),}$$
+$${u=1+{x}^{2}.}$$
+В результаті для v дістаємо рівняння: ${(1+{x}^{2})v'=x\sqrt{1+{x}^{2}},}$ $${dv=\frac{x}{\sqrt{1+{x}^{2}}}dx}$$ 
+$${v=\int\frac{xdx}{\sqrt{1+{x}^{2}}}+c}$$
+Остаточно, ${y=(1+{x}^{2})[\sqrt{1+{x}^{2}}+x].}$
+
+
+
+
+</blockquote>
+</body>
+</html>
