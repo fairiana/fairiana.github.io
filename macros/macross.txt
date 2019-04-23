@@ -7,11 +7,17 @@ Sub Macross()
     Selection.Font.Name = "Times New Roman"
     Selection.Font.Size = 14
     Selection.ParagraphFormat.Alignment = wdAlignParagraphJustify
-    Selection.Font.Bold = wdToggle
-    Selection.Font.Bold = wdToggle
-    Selection.Font.Bold = wdToggle
+   Selection.Font.Bold = wdToggle
+    If Font = Bold Then
+       Selection.Font.Bold = wdToggle
+    End If
     Selection.Font.Italic = wdToggle
-    Selection.Font.Italic = wdToggle
+    If Font = Italic Then
+       Selection.Font.Italic = wdToggle
+    End If
+    If Font = Bold Then
+       Selection.Font.Bold = wdToggle
+    End If
     Selection.Font.TextColor.RGB = RGB(0, 0, 0)
     Selection.Font.UnderlineColor = wdColorAutomatic
     Selection.Font.Underline = wdUnderlineSingle
@@ -89,7 +95,7 @@ Sub Macross()
     Selection.Find.ClearFormatting
     Selection.Find.Replacement.ClearFormatting
     With Selection.Find
-        .Text = "–"
+        .Text = "â€“"
         .Replacement.Text = "-"
         .Forward = True
         .Wrap = wdFindAsk
