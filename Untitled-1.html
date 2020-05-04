@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <title>Студент</title>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script>google.load("visualization", "1.1", 
-{packages:["wordtree"]});
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script> <!-- під'єднання бібліотек API-->
+<script>google.load("visualization", "1.1", //завантаження пакету з сайту гугл
+{packages:["wordtree"]}); //назва пакету
  google.setOnLoadCallback(drawChart);
- function drawChart() {
- var data = google.visualization.arrayToDataTable(
+ function drawChart() {  //функція початку створення мережі
+ var data = google.visualization.arrayToDataTable( //функція створення та заповнення мережі за допомогою масиву 
  [ ['Фразы'],
  ['студент студенти спілкується'],
  ['студент студенти взаємодопомагає'],
@@ -23,22 +24,22 @@
  ['студент підрозділи інформацію оплата'],
  ]
  );
- var options = {
-maxFontSize: 14,
+ var options = { //опис параментрів мережі
+maxFontSize: 14,//розмір шрифту
  wordtree: {
- format: 'implicit',
- word: 'студент'
+ format: 'implicit', //створення відповідно до порядку слів
+  backgroundColor: '#F7F7F8',//колір фону
+ word: 'студент'//головне слово
  }
  };
  var chart = new google.visualization.WordTree
 (document.getElementById('wordtree_basic'));
- chart.draw(data, options);
+ chart.draw(data, options);//функція малювання мережі
  }
 </script>	
 </head>
 
 <body>
-<div id="wordtree_basic" style="margin-bottom:10px;"></div>
+<div id="wordtree_basic" style="margin-bottom:10px;"></div> <!-- блок в якому розміщено мережу-->
 </body>
 </html>
-
